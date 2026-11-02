@@ -1,0 +1,44 @@
+{
+  "name": "LaTeX Environment (TeX Live)",
+  "image": "ghcr.io/xu-cheng/texlive-full:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "James-Yu.latex-workshop",
+        "streetsidesoftware.code-spell-checker",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "latex-workshop.view.pdf.viewer": "tab",
+        "latex-workshop.latex.autoBuild.run": "onFileChange",
+        "latex-workshop.latex.recipe.default": "latexmk",
+        "latex-workshop.latex.clean.subfolder.enabled": true,
+        "latex-workshop.latex.clean.fileTypes": [
+          "*.aux",
+          "*.bbl",
+          "*.blg",
+          "*.idx",
+          "*.ind",
+          "*.lof",
+          "*.lot",
+          "*.out",
+          "*.toc",
+          "*.acn",
+          "*.acr",
+          "*.alg",
+          "*.glg",
+          "*.glo",
+          "*.gls",
+          "*.fls",
+          "*.log",
+          "*.fdb_latexmk",
+          "*.snm",
+          "*.nav",
+          "*.synctex.gz",
+          "*.run.xml",
+          "*.bcf"
+        ]
+      }
+    }
+  }
+}

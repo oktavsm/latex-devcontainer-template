@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{microtype}
+\usepackage{cite}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% --- Document Information ---
+\title{\textbf{Judul Makalah / Laporan Ilmiah}}
+\author{
+    \textbf{Nama Penulis} \\
+    NIM: 1234567890 \\
+    Program Studi Teknik Informatika \\
+    \texttt{email@example.com}
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Ini adalah bagian abstrak. Berikan ringkasan singkat mengenai latar belakang permasalahan, tujuan penelitian, metodologi yang diusulkan, hasil utama yang diperoleh, serta kesimpulan penting secara padat dan jelas.
+\end{abstract}
+
+\textbf{Kata Kunci:} LaTeX, Dev Container, Metodologi Penelitian, Reproducibility.
+
+\section{Pendahuluan}
+Dokumen ini disusun sebagai template penulisan ilmiah dengan dukungan lingkungan terisolasi menggunakan VS Code Dev Container dan TeX Live.
+
+Salah satu tantangan dalam kolaborasi penulisan dokumen berbasis \LaTeX{} adalah perbedaan versi compiler dan paket di mesin masing-masing. Dengan Dev Container, seluruh dependensi sudah terinstalasi seragam di dalam Docker container \cite{knuth1984texbook}.
+
+\section{Tinjauan Pustaka}
+Bagian ini memuat teori dasar dan penelitian terdahulu yang relevan. Sebagai contoh, arsitektur transformator diperkenalkan oleh Vaswani dkk. \cite{vaswani2017attention}, yang berakar pada teori informasi Shannon \cite{shannon1948mathematical}.
+
+\section{Metodologi Penelitian}
+Uraikan langkah-langkah penelitian, arsitektur sistem, atau pendekatan matematis di bagian ini. Contoh rumus matematika:
+\begin{equation}
+    f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right)
+\end{equation}
+
+\subsection{Tabel dan Data}
+Contoh pembuatan tabel rapi dengan paket \texttt{booktabs}:
+\begin{table}[htbp]
+    \centering
+    \caption{Contoh Hasil Evaluasi Model}
+    \label{tab:evaluasi}
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Model} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+        \midrule
+        Baseline       & 0.81               & 0.79            & 0.80              \\
+        Proposed Model & \textbf{0.92}      & \textbf{0.89}   & \textbf{0.90}     \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Hasil dan Pembahasan}
+Jelaskan interpretasi dari data dan hasil eksperimen yang didapatkan pada Tabel \ref{tab:evaluasi}.
+
+\section{Kesimpulan}
+Tuliskan kesimpulan penelitian serta saran untuk pengembangan di masa mendatang.
+
+% --- Referensi ---
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
